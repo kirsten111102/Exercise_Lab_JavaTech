@@ -1,0 +1,63 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.*;
+
+public class RegisterFrame extends JFrame{
+    JTextField username;
+    JPasswordField password;
+    JPasswordField confirmpassword;
+    JButton submit;
+
+    RegisterFrame(){
+        this.setTitle("Register");
+
+        JLabel labelusername = new JLabel("Username");
+        JLabel labelpassword = new JLabel("Password");
+        JLabel labelconfirmpassword = new JLabel("Confirm Password");
+        JLabel errorusername = new JLabel("Username has problem");
+        JLabel errorpassword = new JLabel("Password has problem");
+        JLabel errorconfirmpassword = new JLabel("Confirm password has problem");
+        username = new JTextField();
+        password = new JPasswordField();
+        confirmpassword = new JPasswordField();
+        submit = new JButton("Register");
+
+        labelusername.setBounds(5, 5, 200, 20);
+        username.setBounds(5, 30, 400, 40);
+        errorusername.setBounds(5, 70, 400, 20);
+        labelpassword.setBounds(5, 100, 200, 20);
+        password.setBounds(5, 125, 400, 40);
+        errorpassword.setBounds(5, 165, 400, 20);
+        labelconfirmpassword.setBounds(5, 195, 200, 20);
+        confirmpassword.setBounds(5, 220, 400, 40);
+        errorconfirmpassword.setBounds(5, 260, 400, 20);
+        submit.setBounds(5, 295, 100, 35);
+
+        errorusername.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 12));
+        errorpassword.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 12));
+        errorconfirmpassword.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 12));
+
+        errorusername.setForeground(Color.red);
+        errorpassword.setForeground(Color.red);
+        errorconfirmpassword.setForeground(Color.red);
+
+        errorusername.setVisible(true);
+
+        this.add(labelusername);
+        this.add(username);
+        this.add(errorusername);
+        this.add(labelpassword);
+        this.add(password);
+        this.add(errorpassword);
+        this.add(labelconfirmpassword);
+        this.add(confirmpassword);
+        this.add(errorconfirmpassword);
+        this.add(submit);
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
+        this.setVisible(true);
+        this.setSize(600, 600);
+    }
+}
